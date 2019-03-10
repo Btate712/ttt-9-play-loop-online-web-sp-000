@@ -41,6 +41,7 @@ def next_char(character)
   else
     return "X"
   end
+end
 
 # Define your play method below
 def play(board, character)
