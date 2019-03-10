@@ -35,7 +35,7 @@ def turn(board, character)
   end
 end
 
-def next(character)
+def next_char(character)
   if character == "X"
     return "O"
   else
@@ -48,7 +48,7 @@ def play(board, character)
   num_turns = 0
   while num_turns < 9
     turn(board)
-    next(character)
+    next_char(character)
     num_turns += 1
   end
 end
