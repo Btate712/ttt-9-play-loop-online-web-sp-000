@@ -35,4 +35,16 @@ def turn(board)
   end
 end
 
+def next(character)
+  if character == "X"
+    return "O"
+  else
+    return "X"
+  end
+
 # Define your play method below
+def play(board, character)
+  character = "X"
+  turn(board)
+
+end
