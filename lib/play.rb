@@ -48,7 +48,7 @@ def play(board)
   character = "X"
   num_turns = 0
   while num_turns < 9
-    turn(board,character)
+    turn(board, character)
     next_char(character)
     num_turns += 1
   end
