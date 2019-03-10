@@ -23,12 +23,12 @@ def valid_move?(board, index)
   index.between?(0,8) && !position_taken?(board, index)
 end
 
-def turn(board)
+def turn(board, character)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board, index)
+    move(board, index, character)
     display_board(board)
   else
     turn(board)
@@ -45,6 +45,10 @@ def next(character)
 # Define your play method below
 def play(board, character)
   character = "X"
-  turn(board)
-
+  num_turns = 0
+  while num_turns < 9
+    turn(board)
+    next(character)
+    num_turns += 1
+  end
 end
